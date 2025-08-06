@@ -573,6 +573,120 @@ h6,
   margin-top: auto;
 }
 
+/* Company Values & Expertise Styles */
+.company--values {
+  padding: 0;
+}
+
+.company--values h3 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.value--item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.value--item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+  border-left-color: #3498db;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.value--icon {
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.value--icon i {
+  font-size: 28px;
+  color: #3498db;
+  transition: all 0.3s ease;
+}
+
+.value--item:hover .value--icon i {
+  color: #2980b9;
+  transform: scale(1.1);
+}
+
+.value--content h4 {
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.value--content p {
+  color: #6c757d;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.expertise--highlight {
+  margin-top: 30px;
+  padding: 25px;
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+}
+
+.expertise--badge {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.expertise--badge i {
+  font-size: 24px;
+  color: #f39c12;
+}
+
+.expertise--badge span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.expertise--stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.stat--item {
+  text-align: center;
+  flex: 1;
+}
+
+.stat--number {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.stat--label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 /* Company contact details */
 .company--contact {
   text-align: center;
@@ -594,17 +708,40 @@ h6,
   width: 20px;
 }
 
-/* Fix for milestone responsive */
+/* Company Values Responsive */
 @media (max-width: 768px) {
-  .milestone--item {
+  .value--item {
     flex-direction: column;
     text-align: center;
+    padding: 15px;
   }
 
-  .milestone--year {
+  .value--icon {
     margin-right: 0;
     margin-bottom: 15px;
-    align-self: center;
+  }
+
+  .value--icon i {
+    font-size: 32px;
+  }
+
+  .value--content h4 {
+    font-size: 18px;
+  }
+
+  .expertise--stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .stat--item {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+
+  .stat--number {
+    font-size: 28px;
   }
 }
 
